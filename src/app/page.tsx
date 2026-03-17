@@ -65,7 +65,9 @@ export default function LandingPage() {
       
       {submitted ? (
         <div className="text-center py-8">
-          <div className="text-primary text-4xl mb-4">✓</div>
+          <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+          </div>
           <h4 className="font-display text-2xl font-bold text-white mb-2">Thank You!</h4>
           <p className="text-text-muted">We&apos;ll be in touch within 24 hours.</p>
         </div>
@@ -194,16 +196,18 @@ export default function LandingPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: "HEATMAXX", tagline: "Beat the Heat", desc: "Advanced heat-resistant technology that keeps surface temperatures significantly cooler than standard turf. Ideal for Sunbelt regions and high-temperature environments.", icon: "🔥", color: "from-orange-500/20 to-red-500/20" },
-              { name: "AQUAMAXX", tagline: "Superior Drainage", desc: "Engineered drainage system handles heavy rainfall with ease. Perfect for flood-prone areas and properties that demand rapid water management.", icon: "💧", color: "from-blue-500/20 to-cyan-500/20" },
-              { name: "LAWNMAXX", tagline: "Premium Landscaping", desc: "The most realistic residential turf on the market. Ultra-soft blades, natural color variation, and a lush appearance that rivals real grass.", icon: "🌿", color: "from-green-500/20 to-emerald-500/20" },
-              { name: "PETMAXX", tagline: "Pet-Friendly Protection", desc: "Antimicrobial-treated turf designed for pet owners. Easy cleaning, odor control technology, and durable construction that stands up to heavy use.", icon: "🐕", color: "from-amber-500/20 to-yellow-500/20" },
-              { name: "SPORTMAXX", tagline: "Athletic Performance", desc: "Professional-grade athletic turf for sports fields, training facilities, and recreational areas. Consistent ball roll, shock absorption, and certified safety.", icon: "⚽", color: "from-purple-500/20 to-indigo-500/20" },
-              { name: "PLAYMAXX", tagline: "Safe Play Surfaces", desc: "IPEMA-certified playground surfaces with fall-height ratings. Maximum safety for children with soft landing and antimicrobial protection.", icon: "🛝", color: "from-pink-500/20 to-rose-500/20" }
+              { name: "HEATMAXX", tagline: "Beat the Heat", desc: "Advanced heat-resistant technology that keeps surface temperatures significantly cooler than standard turf. Ideal for Sunbelt regions and high-temperature environments.", color: "from-orange-500/20 to-red-500/20" },
+              { name: "AQUAMAXX", tagline: "Superior Drainage", desc: "Engineered drainage system handles heavy rainfall with ease. Perfect for flood-prone areas and properties that demand rapid water management.", color: "from-blue-500/20 to-cyan-500/20" },
+              { name: "LAWNMAXX", tagline: "Premium Landscaping", desc: "The most realistic residential turf on the market. Ultra-soft blades, natural color variation, and a lush appearance that rivals real grass.", color: "from-green-500/20 to-emerald-500/20" },
+              { name: "PETMAXX", tagline: "Pet-Friendly Protection", desc: "Antimicrobial-treated turf designed for pet owners. Easy cleaning, odor control technology, and durable construction that stands up to heavy use.", color: "from-amber-500/20 to-yellow-500/20" },
+              { name: "SPORTMAXX", tagline: "Athletic Performance", desc: "Professional-grade athletic turf for sports fields, training facilities, and recreational areas. Consistent ball roll, shock absorption, and certified safety.", color: "from-purple-500/20 to-indigo-500/20" },
+              { name: "PLAYMAXX", tagline: "Safe Play Surfaces", desc: "IPEMA-certified playground surfaces with fall-height ratings. Maximum safety for children with soft landing and antimicrobial protection.", color: "from-pink-500/20 to-rose-500/20" }
             ].map((product, index) => (
               <Reveal key={product.name} delay={index * 80}>
                 <div className={`bg-gradient-to-br ${product.color} rounded-2xl p-8 border border-dark-border hover:border-primary/50 transition-all group`}>
-                  <div className="text-4xl mb-4">{product.icon}</div>
+                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
+                  </div>
                   <h3 className="font-display text-2xl font-bold text-primary uppercase tracking-wider mb-1">{product.name}<span className="text-white">®</span></h3>
                   <div className="text-secondary text-sm font-semibold uppercase tracking-wider mb-4">{product.tagline}</div>
                   <p className="text-text-muted leading-relaxed">{product.desc}</p>
