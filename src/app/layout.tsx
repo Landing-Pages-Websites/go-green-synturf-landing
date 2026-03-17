@@ -43,7 +43,7 @@ export default function RootLayout({
             __html: `window.MEGA_TAG_CONFIG={siteKey:"sk_mmv0e66a_pp52arhoujl",pixelId:"984548607190857"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";`,
           }}
         />
-        <script src="https://cdn.gomega.ai/scripts/optimizer.min.js" data-site-id="5ef1ab2b-a778-4858-bb3d-d1cd9b311360" async />
+        <script id="optimizer-script" src="https://cdn.gomega.ai/scripts/optimizer.min.js" data-site-id="5ef1ab2b-a778-4858-bb3d-d1cd9b311360" async />
       </head>
       <body className={`${montserrat.className} antialiased bg-white text-[#32373c]`}>
         {children}

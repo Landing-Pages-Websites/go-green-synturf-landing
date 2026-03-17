@@ -288,6 +288,16 @@ export default function LandingPage() {
               ))}
             </div>
           </Reveal>
+          <Reveal delay={300}>
+            <div className="flex flex-col items-center gap-3 mt-10">
+              <a href="#contact" className="rounded-xl px-8 py-3 font-black uppercase tracking-wide transition-all" style={{ backgroundColor: "#64d613", color: "#003388" }}>
+                Get a Free Quote
+              </a>
+              <a href={PHONE_HREF} className="border-2 border-white text-white rounded-xl px-6 py-2.5 font-bold text-sm transition-all">
+                Or call us: {PHONE}
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
 
