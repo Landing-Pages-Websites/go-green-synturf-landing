@@ -74,12 +74,12 @@ export default function LandingPage() {
       ) : (
         <>
           <div className="grid grid-cols-2 gap-3 mb-3">
-            <input type="text" name="firstName" placeholder="First Name *" required className="bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white placeholder-text-muted focus:border-primary outline-none transition-colors" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} />
-            <input type="text" name="lastName" placeholder="Last Name *" required className="bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white placeholder-text-muted focus:border-primary outline-none transition-colors" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} />
+            <input type="text" name="firstName" placeholder="First Name" required className="bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:border-primary outline-none transition-colors" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} />
+            <input type="text" name="lastName" placeholder="Last Name" required className="bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:border-primary outline-none transition-colors" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} />
           </div>
           <div className="grid grid-cols-2 gap-3 mb-3">
-            <input type="email" name="email" placeholder="Email *" required className="bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white placeholder-text-muted focus:border-primary outline-none transition-colors" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
-            <input type="tel" name="phone" placeholder="Phone *" required className="bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white placeholder-text-muted focus:border-primary outline-none transition-colors" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
+            <input type="email" name="email" placeholder="Email" required className="bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:border-primary outline-none transition-colors" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+            <input type="tel" name="phone" placeholder="Phone" required className="bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:border-primary outline-none transition-colors" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
           </div>
           <select name="needsType" required className="w-full bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white focus:border-primary outline-none transition-colors mb-3" value={formData.needsType} onChange={(e) => setFormData({ ...formData, needsType: e.target.value })}>
             <option value="">What best describes your needs? *</option>
@@ -88,9 +88,9 @@ export default function LandingPage() {
             <option value="contractor">I&apos;m a contractor or installer</option>
             <option value="dealer">I&apos;m a turf dealer</option>
           </select>
-          <textarea name="message" placeholder="Tell us about your project (optional)" rows={3} className="w-full bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white placeholder-text-muted focus:border-primary outline-none transition-colors mb-4" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+          <textarea name="message" placeholder="Tell us about your project (optional)" rows={3} className="w-full bg-dark border-2 border-dark-border rounded-lg px-4 py-3 text-white placeholder:text-gray-500 focus:border-primary outline-none transition-colors mb-4" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
           <button type="submit" disabled={isSubmitting} className="w-full bg-primary text-black font-bold py-4 rounded-lg text-lg uppercase tracking-wider hover:bg-primary/90 transition-all disabled:opacity-50">
-            {isSubmitting ? "Submitting..." : "Get My Free Quote"}
+            {isSubmitting ? "Submitting..." : "Get Your Quote"}
           </button>
         </>
       )}
@@ -146,7 +146,7 @@ export default function LandingPage() {
             <Reveal delay={300}>
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <a href="#hero-form" className="bg-primary text-black px-8 py-4 rounded-lg font-bold text-lg uppercase tracking-wider hover:bg-primary/90 transition-all">
-                  Get Your Free Quote
+                  Get Your Quote
                 </a>
               </div>
             </Reveal>
