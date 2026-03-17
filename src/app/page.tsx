@@ -387,9 +387,9 @@ export default function LandingPage() {
           
           <div className="space-y-4">
             {[
-              { q: "What makes Go Green turf different from competitors?", a: "Our six engineered product lines are each designed for specific applications. Unlike one-size-fits-all solutions, we match the right turf to your exact environment — heat resistance, drainage, pet safety, or athletic performance." },
+              { q: "What makes Go Green Synthetic Turf different from competitors?", a: "Our six engineered product lines are each designed for specific applications. Unlike one-size-fits-all solutions, we match the right turf to your exact environment — heat resistance, drainage, pet safety, or athletic performance." },
               { q: "Do you offer dealer and installer programs?", a: "Yes. We offer competitive wholesale pricing, exclusive territory opportunities, technical training, marketing support, and dedicated account management for qualified dealers and installers." },
-              { q: "How long does synthetic turf last?", a: "Go Green turf products are engineered for 15-20+ years of performance with proper installation and minimal maintenance. All products include comprehensive warranties." },
+              { q: "How long does synthetic turf last?", a: "Go Green Synthetic Turf products are engineered for 15-20+ years of performance with proper installation and minimal maintenance. All products include comprehensive warranties." },
               { q: "Can I get samples before ordering?", a: "Absolutely. We offer free product samples for all six turf lines. Fill out the form and specify which products you'd like to evaluate." },
               { q: "Do you ship nationwide?", a: "Yes. We ship to all 50 states with competitive freight rates. Most orders ship within 5-7 business days from our warehouse." },
               { q: "What maintenance does synthetic turf require?", a: "Minimal. Occasional brushing to keep fibers upright, rinsing for debris removal, and light infill top-ups as needed. No mowing, watering, or fertilizing." }
