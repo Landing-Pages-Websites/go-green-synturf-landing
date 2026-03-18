@@ -133,10 +133,15 @@ export default function LandingPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [showFloating, setShowFloating] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => setShowFloating(window.scrollY > 700);
+    const handleScroll = () => {
+      setShowFloating(window.scrollY > 700);
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -191,6 +196,9 @@ export default function LandingPage() {
   return (
     <>
       <QueryParamPersistence />
+
+      {/* SCROLL PROGRESS BAR */}
+      <div className="fixed top-0 left-0 z-[100] h-1 transition-none" style={{ width: `${scrollProgress}%`, backgroundColor: "#64d613" }} />
 
       {/* HEADER */}
       <header className="fixed top-0 w-full z-50 shadow-sm" style={{ backgroundColor: "rgba(255,255,255,0.97)", borderBottom: "1px solid #e2e8f0", backdropFilter: "blur(12px)" }}>
@@ -633,20 +641,30 @@ export default function LandingPage() {
       <footer className="py-8 text-center" style={{ backgroundColor: "#1a1f2e" }}>
         <p className="text-sm" style={{ color: "#64748b" }}>
           &copy; 2026 Go Green Synthetic Turf. All rights reserved.{" "}
-          <a href="#" style={{ color: "#64748b" }} className="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="https://www.gogreensynturf.com/privacy-policy/" target="_blank" rel="noopener noreferrer" style={{ color: "#64748b" }} className="hover:text-white transition-colors">Privacy Policy</a>
           {" | "}
-          <a href="#" style={{ color: "#64748b" }} className="hover:text-white transition-colors">Terms of Service</a>
+          <a href="https://www.gogreensynturf.com/terms-conditions/" target="_blank" rel="noopener noreferrer" style={{ color: "#64748b" }} className="hover:text-white transition-colors">Terms of Service</a>
         </p>
       </footer>
 
-      {/* FLOATING STICKY CTA — form only, no phone (per style-preferences.md) */}
-      <div className={`fixed bottom-6 right-6 z-40 transition-all duration-500 ${showFloating ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 pointer-events-none"}`}>
-        <a href="#contact" className="rounded-full px-6 py-4 font-black uppercase tracking-wide shadow-2xl transition-all flex items-center gap-2 text-sm" style={{ backgroundColor: "#64d613", color: "#003388", boxShadow: "0 8px 32px rgba(100,214,19,0.4)" }}>
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
-          </svg>
-          Get Free Quote
-        </a>
+      {/* FLOATING STICKY CTA */}
+      <div className={`fixed z-40 transition-all duration-500 bottom-0 left-0 right-0 sm:bottom-6 sm:right-6 sm:left-auto sm:w-auto ${showFloating ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 pointer-events-none"}`}>
+        <div className="flex items-stretch sm:items-center sm:rounded-full shadow-2xl" style={{ backgroundColor: "#64d613", boxShadow: "0 8px 32px rgba(100,214,19,0.4)" }}>
+          <a href="#contact" className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-5 py-4 font-black uppercase tracking-wide text-sm sm:pl-6 sm:rounded-l-full" style={{ color: "#003388" }}>
+            <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+            </svg>
+            Get Free Quote
+          </a>
+          <div className="w-px self-stretch" style={{ backgroundColor: "rgba(0,51,136,0.2)" }} />
+          <a href={PHONE_HREF} className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-5 py-4 font-black uppercase tracking-wide text-sm sm:pr-6 sm:rounded-r-full" style={{ color: "#003388" }}>
+            <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z" />
+            </svg>
+            <span className="hidden sm:inline">{PHONE}</span>
+            <span className="sm:hidden">Call</span>
+          </a>
+        </div>
       </div>
     </>
   );
