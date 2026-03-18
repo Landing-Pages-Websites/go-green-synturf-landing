@@ -45,7 +45,7 @@ export default function RootLayout({
         />
         <script id="optimizer-script" src="https://cdn.gomega.ai/scripts/optimizer.min.js" data-site-id="5ef1ab2b-a778-4858-bb3d-d1cd9b311360" async />
       </head>
-      <body className={`${montserrat.className} antialiased bg-white text-[#32373c]`}>
+      <body className={`${montserrat.className} antialiased bg-white text-[#4d4d4d]`}>
         {children}
         <Script src="https://572388.tctm.co/t.js" strategy="afterInteractive" />
       </body>

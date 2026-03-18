@@ -59,11 +59,11 @@ function LeadFormContent({ onSubmit, isSubmitting, submitted }: {
     return (
       <div className="text-center py-10">
         <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: "rgba(100,214,19,0.2)" }}>
-          <svg className="w-8 h-8" style={{ color: "#64d613" }} fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+          <svg className="w-8 h-8" style={{ color: "#83B940" }} fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
         </div>
-        <h4 className="text-2xl font-black mb-2" style={{ color: "#003388" }}>Thank You!</h4>
+        <h4 className="text-2xl font-black mb-2" style={{ color: "#000000" }}>Thank You!</h4>
         <p style={{ color: "#64748b" }}>Our team will be in touch within 24 hours.</p>
       </div>
     );
@@ -78,19 +78,19 @@ function LeadFormContent({ onSubmit, isSubmitting, submitted }: {
       <div className="grid grid-cols-2 gap-3">
         <input name="firstName" type="text" placeholder="First Name" required
           className="border-2 rounded-lg px-4 py-3 placeholder-gray-400 outline-none transition-colors w-full text-sm"
-          style={{ borderColor: "#e2e8f0", color: "#32373c" }}
-          onFocus={e => (e.target.style.borderColor = "#64d613")}
+          style={{ borderColor: "#e2e8f0", color: "#4d4d4d" }}
+          onFocus={e => (e.target.style.borderColor = "#83B940")}
           onBlur={e => (e.target.style.borderColor = "#e2e8f0")} />
         <input name="lastName" type="text" placeholder="Last Name" required
           className="border-2 rounded-lg px-4 py-3 placeholder-gray-400 outline-none transition-colors w-full text-sm"
-          style={{ borderColor: "#e2e8f0", color: "#32373c" }}
-          onFocus={e => (e.target.style.borderColor = "#64d613")}
+          style={{ borderColor: "#e2e8f0", color: "#4d4d4d" }}
+          onFocus={e => (e.target.style.borderColor = "#83B940")}
           onBlur={e => (e.target.style.borderColor = "#e2e8f0")} />
       </div>
       <input name="email" type="email" placeholder="Email Address" required
         className="border-2 rounded-lg px-4 py-3 placeholder-gray-400 outline-none transition-colors w-full text-sm"
-        style={{ borderColor: "#e2e8f0", color: "#32373c" }}
-        onFocus={e => (e.target.style.borderColor = "#64d613")}
+        style={{ borderColor: "#e2e8f0", color: "#4d4d4d" }}
+        onFocus={e => (e.target.style.borderColor = "#83B940")}
         onBlur={e => (e.target.style.borderColor = "#e2e8f0")} />
       <div>
         <input name="phone" type="tel" inputMode="numeric" placeholder="(555) 123-4567" required
@@ -98,15 +98,15 @@ function LeadFormContent({ onSubmit, isSubmitting, submitted }: {
           onChange={e => { setPhone(formatPhone(e.target.value)); if (phoneError) setPhoneError(false); }}
           pattern="\(\d{3}\) \d{3}-\d{4}" title="Please enter a valid 10-digit phone number"
           className="border-2 rounded-lg px-4 py-3 placeholder-gray-400 outline-none transition-colors w-full text-sm"
-          style={{ borderColor: phoneError ? "#ef4444" : "#e2e8f0", color: "#32373c" }}
-          onFocus={e => { if (!phoneError) e.target.style.borderColor = "#64d613"; }}
+          style={{ borderColor: phoneError ? "#ef4444" : "#e2e8f0", color: "#4d4d4d" }}
+          onFocus={e => { if (!phoneError) e.target.style.borderColor = "#83B940"; }}
           onBlur={e => { if (!phoneError) e.target.style.borderColor = "#e2e8f0"; }} />
         {phoneError && <p className="text-red-500 text-xs mt-1">Please enter a valid 10-digit phone number.</p>}
       </div>
       <select name="needsType" required defaultValue=""
         className="border-2 rounded-lg px-4 py-3 outline-none transition-colors w-full text-sm bg-white"
-        style={{ borderColor: "#e2e8f0", color: "#32373c" }}
-        onFocus={e => (e.target.style.borderColor = "#64d613")}
+        style={{ borderColor: "#e2e8f0", color: "#4d4d4d" }}
+        onFocus={e => (e.target.style.borderColor = "#83B940")}
         onBlur={e => (e.target.style.borderColor = "#e2e8f0")}>
         <option value="" disabled>Please tell us what best describes your needs?</option>
         <option value="residential">I am a homeowner (Residential)</option>
@@ -116,12 +116,12 @@ function LeadFormContent({ onSubmit, isSubmitting, submitted }: {
       </select>
       <textarea name="message" placeholder="Tell us about your project (optional)" rows={3}
         className="border-2 rounded-lg px-4 py-3 placeholder-gray-400 outline-none transition-colors w-full text-sm resize-none"
-        style={{ borderColor: "#e2e8f0", color: "#32373c" }}
-        onFocus={e => (e.target.style.borderColor = "#64d613")}
+        style={{ borderColor: "#e2e8f0", color: "#4d4d4d" }}
+        onFocus={e => (e.target.style.borderColor = "#83B940")}
         onBlur={e => (e.target.style.borderColor = "#e2e8f0")} />
       <button type="submit" disabled={isSubmitting}
         className="w-full font-black py-4 rounded-lg text-base uppercase tracking-wide transition-all disabled:opacity-50 shadow-lg"
-        style={{ backgroundColor: "#64d613", color: "#003388" }}>
+        style={{ backgroundColor: "#83B940", color: "#000000" }}>
         {isSubmitting ? "Submitting..." : "Get My Free Quote"}
       </button>
     </form>
@@ -198,7 +198,7 @@ export default function LandingPage() {
       <QueryParamPersistence />
 
       {/* SCROLL PROGRESS BAR */}
-      <div className="fixed top-0 left-0 z-[100] h-1 transition-none" style={{ width: `${scrollProgress}%`, backgroundColor: "#64d613" }} />
+      <div className="fixed top-0 left-0 z-[100] h-1 transition-none" style={{ width: `${scrollProgress}%`, backgroundColor: "#83B940" }} />
 
       {/* HEADER */}
       <header className="fixed top-0 w-full z-50 shadow-sm" style={{ backgroundColor: "rgba(255,255,255,0.97)", borderBottom: "1px solid #e2e8f0", backdropFilter: "blur(12px)" }}>
@@ -206,15 +206,15 @@ export default function LandingPage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="https://www.gogreensynturf.com/wp-content/uploads/2025/03/GGLogoDarkSticky-NEW.png" alt="Go Green Synthetic Turf" className="h-10 w-auto" />
           <div className="flex items-center gap-3">
-            <a href={PHONE_HREF} className="hidden sm:flex items-center gap-2 border-2 rounded-lg px-4 py-2 font-bold text-sm transition-all" style={{ borderColor: "#003388", color: "#003388" }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = "#003388"; (e.currentTarget as HTMLElement).style.color = "white"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = "transparent"; (e.currentTarget as HTMLElement).style.color = "#003388"; }}>
+            <a href={PHONE_HREF} className="hidden sm:flex items-center gap-2 border-2 rounded-lg px-4 py-2 font-bold text-sm transition-all" style={{ borderColor: "#000000", color: "#000000" }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = "#000000"; (e.currentTarget as HTMLElement).style.color = "white"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = "transparent"; (e.currentTarget as HTMLElement).style.color = "#000000"; }}>
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
               </svg>
               {PHONE}
             </a>
-            <a href="#contact" className="rounded-lg px-5 py-2.5 font-black text-sm uppercase tracking-wide transition-all shadow-md" style={{ backgroundColor: "#64d613", color: "#003388" }}>
+            <a href="#contact" className="rounded-lg px-5 py-2.5 font-black text-sm uppercase tracking-wide transition-all shadow-md" style={{ backgroundColor: "#83B940", color: "#000000" }}>
               Get Free Quote
             </a>
           </div>
@@ -229,16 +229,16 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10 py-16">
           <div>
             <Reveal>
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider mb-6" style={{ backgroundColor: "rgba(100,214,19,0.15)", color: "#50aa10", border: "1px solid rgba(100,214,19,0.3)" }}>
-                <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#64d613" }} />
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wider mb-6" style={{ backgroundColor: "rgba(100,214,19,0.15)", color: "#6B9A34", border: "1px solid rgba(100,214,19,0.3)" }}>
+                <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#83B940" }} />
                 Premium Engineered Turf Systems
               </div>
             </Reveal>
             <Reveal delay={80}>
-              <h1 className="font-display font-black mb-6 uppercase leading-tight" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", color: "#003388", lineHeight: "1.0" }}>
+              <h1 className="font-display font-black mb-6 uppercase leading-tight" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", color: "#000000", lineHeight: "1.0" }}>
                 THE GRASS IS
-                <span className="block" style={{ color: "#64d613" }}>ALWAYS GREENER</span>
-                <span className="block" style={{ color: "#32373c", fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}>ON OUR SIDE.</span>
+                <span className="block" style={{ color: "#83B940" }}>ALWAYS GREENER</span>
+                <span className="block" style={{ color: "#4d4d4d", fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}>ON OUR SIDE.</span>
               </h1>
             </Reveal>
             <Reveal delay={160}>
@@ -249,8 +249,8 @@ export default function LandingPage() {
             <Reveal delay={240}>
               <div className="flex flex-wrap gap-4 items-center mb-8">
                 {["15+ Years in Business", "Ships All 50 States", "Dealer Programs Available"].map((item) => (
-                  <div key={item} className="flex items-center gap-2 text-sm font-medium" style={{ color: "#32373c" }}>
-                    <svg className="w-5 h-5" style={{ color: "#64d613" }} fill="currentColor" viewBox="0 0 20 20">
+                  <div key={item} className="flex items-center gap-2 text-sm font-medium" style={{ color: "#4d4d4d" }}>
+                    <svg className="w-5 h-5" style={{ color: "#83B940" }} fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                     </svg>
                     {item}
@@ -263,9 +263,9 @@ export default function LandingPage() {
           <Reveal delay={200}>
             <div id="hero-form" className="bg-white rounded-2xl shadow-2xl p-8" style={{ border: "1px solid #e2e8f0" }}>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-1 h-10 rounded-full" style={{ backgroundColor: "#64d613" }} />
+                <div className="w-1 h-10 rounded-full" style={{ backgroundColor: "#83B940" }} />
                 <div>
-                  <h2 className="text-xl font-black uppercase" style={{ color: "#003388" }}>Get Your Free Quote</h2>
+                  <h2 className="text-xl font-black uppercase" style={{ color: "#000000" }}>Get Your Free Quote</h2>
                   <p className="text-sm" style={{ color: "#64748b" }}>We&apos;ll respond within 24 hours</p>
                 </div>
               </div>
@@ -276,7 +276,7 @@ export default function LandingPage() {
       </section>
 
       {/* STATS BAR */}
-      <section id="stats" className="py-16" style={{ backgroundColor: "#003388" }}>
+      <section id="stats" className="py-16" style={{ backgroundColor: "#000000" }}>
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -287,7 +287,7 @@ export default function LandingPage() {
                 { target: 50, suffix: "+", label: "States Served" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <div className="font-display font-black" style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)", color: "#64d613" }}>
+                  <div className="font-display font-black" style={{ fontSize: "clamp(2.5rem, 5vw, 3.5rem)", color: "#83B940" }}>
                     <AnimatedCounter target={stat.target} suffix={stat.suffix} />
                   </div>
                   <div className="mt-2 uppercase tracking-wider text-sm font-semibold" style={{ color: "rgba(255,255,255,0.7)" }}>{stat.label}</div>
@@ -297,7 +297,7 @@ export default function LandingPage() {
           </Reveal>
           <Reveal delay={300}>
             <div className="flex flex-col items-center gap-3 mt-10">
-              <a href="#contact" className="rounded-xl px-8 py-3 font-black uppercase tracking-wide transition-all" style={{ backgroundColor: "#64d613", color: "#003388" }}>
+              <a href="#contact" className="rounded-xl px-8 py-3 font-black uppercase tracking-wide transition-all" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Get a Free Quote
               </a>
               <a href={PHONE_HREF} className="border-2 border-white text-white rounded-xl px-6 py-2.5 font-bold text-sm transition-all">
@@ -313,9 +313,9 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
             <div className="text-center mb-16">
-              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#50aa10" }}>Six Engineered Product Lines</div>
-              <h2 className="font-display font-black uppercase leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#003388" }}>
-                Purpose-Built for<span className="block" style={{ color: "#64d613" }}>Every Application</span>
+              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#6B9A34" }}>Six Engineered Product Lines</div>
+              <h2 className="font-display font-black uppercase leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#000000" }}>
+                Purpose-Built for<span className="block" style={{ color: "#83B940" }}>Every Application</span>
               </h2>
               <p className="mt-4 text-lg max-w-2xl mx-auto" style={{ color: "#64748b" }}>
                 Not one turf fits all. Each product line is precision-engineered for a specific environment, use case, and performance standard.
@@ -336,9 +336,9 @@ export default function LandingPage() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-display font-black uppercase mb-1 text-xl" style={{ color: "#003388" }}>{product.tagline}</h3>
+                    <h3 className="font-display font-black uppercase mb-1 text-xl" style={{ color: "#000000" }}>{product.tagline}</h3>
                     <p className="text-sm leading-relaxed" style={{ color: "#64748b" }}>{product.desc}</p>
-                    <a href="#contact" className="inline-flex items-center gap-1 font-bold text-sm mt-4 transition-all" style={{ color: "#50aa10" }}>
+                    <a href="#contact" className="inline-flex items-center gap-1 font-bold text-sm mt-4 transition-all" style={{ color: "#6B9A34" }}>
                       Get a Sample
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -352,10 +352,10 @@ export default function LandingPage() {
 
           <Reveal delay={500}>
             <div className="flex flex-col items-center gap-3 mt-14">
-              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#64d613", color: "#003388" }}>
+              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Request Free Product Samples
               </a>
-              <a href={PHONE_HREF} className="border-2 rounded-xl px-8 py-3 font-bold text-base transition-all" style={{ borderColor: "#003388", color: "#003388" }}>
+              <a href={PHONE_HREF} className="border-2 rounded-xl px-8 py-3 font-bold text-base transition-all" style={{ borderColor: "#000000", color: "#000000" }}>
                 Or call us: {PHONE}
               </a>
             </div>
@@ -369,9 +369,9 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <Reveal>
               <div>
-                <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#50aa10" }}>Our Difference</div>
-                <h2 className="font-display font-black uppercase leading-tight mb-6" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#003388" }}>
-                  Built Different.<span className="block" style={{ color: "#64d613" }}>Built Better.</span>
+                <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#6B9A34" }}>Our Difference</div>
+                <h2 className="font-display font-black uppercase leading-tight mb-6" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#000000" }}>
+                  Built Different.<span className="block" style={{ color: "#83B940" }}>Built Better.</span>
                 </h2>
                 <p className="text-lg mb-6 leading-relaxed" style={{ color: "#64748b" }}>
                   At Go Green, we believe in creating the best turf on the market. While remaining grounded in our manufacturing roots, we relentlessly innovate — staying ahead of the curve and bringing our dealer network with us.
@@ -382,12 +382,12 @@ export default function LandingPage() {
                 <div className="space-y-4">
                   {["USA-manufactured premium materials", "Rigorous quality testing on every batch", "Dedicated dealer and installer support", "Industry-leading warranties on all products", "Custom solutions tailored to your project"].map((item) => (
                     <div key={item} className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#64d613" }}>
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#83B940" }}>
                         <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
                       </div>
-                      <span className="font-medium" style={{ color: "#32373c" }}>{item}</span>
+                      <span className="font-medium" style={{ color: "#4d4d4d" }}>{item}</span>
                     </div>
                   ))}
                 </div>
@@ -398,8 +398,8 @@ export default function LandingPage() {
               <div className="relative">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="https://www.gogreensynturf.com/wp-content/uploads/2025/02/Mat1.png" alt="Go Green Synthetic Turf Manufacturing Quality" className="w-full rounded-2xl shadow-2xl" />
-                <div className="absolute -bottom-6 -left-6 text-white rounded-xl p-6 shadow-xl max-w-xs" style={{ backgroundColor: "#003388" }}>
-                  <div className="font-black text-3xl mb-1" style={{ color: "#64d613" }}>15+</div>
+                <div className="absolute -bottom-6 -left-6 text-white rounded-xl p-6 shadow-xl max-w-xs" style={{ backgroundColor: "#000000" }}>
+                  <div className="font-black text-3xl mb-1" style={{ color: "#83B940" }}>15+</div>
                   <div className="text-sm font-semibold uppercase tracking-wide">Years engineering premium synthetic turf systems</div>
                 </div>
               </div>
@@ -408,10 +408,10 @@ export default function LandingPage() {
 
           <Reveal delay={300}>
             <div className="flex flex-col items-center gap-3 mt-16">
-              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#64d613", color: "#003388" }}>
+              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Learn More — Get a Free Quote
               </a>
-              <a href={PHONE_HREF} className="border-2 rounded-xl px-8 py-3 font-bold text-base transition-all" style={{ borderColor: "#003388", color: "#003388" }}>
+              <a href={PHONE_HREF} className="border-2 rounded-xl px-8 py-3 font-bold text-base transition-all" style={{ borderColor: "#000000", color: "#000000" }}>
                 Or call us: {PHONE}
               </a>
             </div>
@@ -420,13 +420,13 @@ export default function LandingPage() {
       </section>
 
       {/* WHO WE SERVE */}
-      <section id="audience" className="py-24" style={{ backgroundColor: "#003388" }}>
+      <section id="audience" className="py-24" style={{ backgroundColor: "#000000" }}>
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
             <div className="text-center mb-16">
-              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#64d613" }}>Who We Serve</div>
+              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#83B940" }}>Who We Serve</div>
               <h2 className="font-display font-black text-white uppercase leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
-                Your Partner in<span className="block" style={{ color: "#64d613" }}>Premium Turf</span>
+                Your Partner in<span className="block" style={{ color: "#83B940" }}>Premium Turf</span>
               </h2>
             </div>
           </Reveal>
@@ -441,7 +441,7 @@ export default function LandingPage() {
               <Reveal key={audience.title} delay={index * 100}>
                 <div className="rounded-2xl p-8 border text-center transition-all" style={{ backgroundColor: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)" }}>
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: "rgba(100,214,19,0.2)" }}>
-                    <svg className="w-7 h-7" style={{ color: "#64d613" }} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <svg className="w-7 h-7" style={{ color: "#83B940" }} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d={audience.icon} />
                     </svg>
                   </div>
@@ -454,7 +454,7 @@ export default function LandingPage() {
 
           <Reveal delay={400}>
             <div className="flex flex-col items-center gap-3 mt-14">
-              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#64d613", color: "#003388" }}>
+              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Start Your Partnership
               </a>
               <a href={PHONE_HREF} className="border-2 border-white text-white rounded-xl px-8 py-3 font-bold text-base transition-all hover:bg-white" style={{ color: "white" }}>
@@ -470,9 +470,9 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
             <div className="text-center mb-16">
-              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#50aa10" }}>How It Works</div>
-              <h2 className="font-display font-black uppercase leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#003388" }}>
-                Simple Process.<span className="block" style={{ color: "#64d613" }}>Premium Results.</span>
+              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#6B9A34" }}>How It Works</div>
+              <h2 className="font-display font-black uppercase leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#000000" }}>
+                Simple Process.<span className="block" style={{ color: "#83B940" }}>Premium Results.</span>
               </h2>
             </div>
           </Reveal>
@@ -486,10 +486,10 @@ export default function LandingPage() {
             ].map((item, index) => (
               <Reveal key={item.step} delay={index * 130}>
                 <div className="text-center">
-                  <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style={{ backgroundColor: "#003388" }}>
-                    <span className="font-display font-black text-2xl" style={{ color: "#64d613" }}>{item.step}</span>
+                  <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg" style={{ backgroundColor: "#000000" }}>
+                    <span className="font-display font-black text-2xl" style={{ color: "#83B940" }}>{item.step}</span>
                   </div>
-                  <h3 className="font-display font-black uppercase mb-3" style={{ color: "#003388" }}>{item.title}</h3>
+                  <h3 className="font-display font-black uppercase mb-3" style={{ color: "#000000" }}>{item.title}</h3>
                   <p className="leading-relaxed text-sm" style={{ color: "#64748b" }}>{item.desc}</p>
                 </div>
               </Reveal>
@@ -498,10 +498,10 @@ export default function LandingPage() {
 
           <Reveal delay={550}>
             <div className="flex flex-col items-center gap-3 mt-14">
-              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#64d613", color: "#003388" }}>
+              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Get Started Today
               </a>
-              <a href={PHONE_HREF} className="border-2 rounded-xl px-8 py-3 font-bold text-base transition-all" style={{ borderColor: "#003388", color: "#003388" }}>
+              <a href={PHONE_HREF} className="border-2 rounded-xl px-8 py-3 font-bold text-base transition-all" style={{ borderColor: "#000000", color: "#000000" }}>
                 Or call us: {PHONE}
               </a>
             </div>
@@ -514,9 +514,9 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
             <div className="text-center mb-16">
-              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#50aa10" }}>Testimonials</div>
-              <h2 className="font-display font-black uppercase leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#003388" }}>
-                Trusted by<span className="block" style={{ color: "#64d613" }}>Pros Nationwide</span>
+              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#6B9A34" }}>Testimonials</div>
+              <h2 className="font-display font-black uppercase leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#000000" }}>
+                Trusted by<span className="block" style={{ color: "#83B940" }}>Pros Nationwide</span>
               </h2>
             </div>
           </Reveal>
@@ -532,9 +532,9 @@ export default function LandingPage() {
                       </svg>
                     ))}
                   </div>
-                  <p className="mb-6 leading-relaxed italic" style={{ color: "#32373c" }}>&ldquo;{t.quote}&rdquo;</p>
+                  <p className="mb-6 leading-relaxed italic" style={{ color: "#4d4d4d" }}>&ldquo;{t.quote}&rdquo;</p>
                   <div>
-                    <div className="font-black" style={{ color: "#003388" }}>{t.name}</div>
+                    <div className="font-black" style={{ color: "#000000" }}>{t.name}</div>
                     <div className="text-sm" style={{ color: "#64748b" }}>{t.role}</div>
                   </div>
                 </div>
@@ -544,10 +544,10 @@ export default function LandingPage() {
 
           <Reveal delay={500}>
             <div className="flex flex-col items-center gap-3 mt-14">
-              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#64d613", color: "#003388" }}>
+              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Join Our Growing Network
               </a>
-              <a href={PHONE_HREF} className="border-2 rounded-xl px-8 py-3 font-bold text-base transition-all" style={{ borderColor: "#003388", color: "#003388" }}>
+              <a href={PHONE_HREF} className="border-2 rounded-xl px-8 py-3 font-bold text-base transition-all" style={{ borderColor: "#000000", color: "#000000" }}>
                 Or call us: {PHONE}
               </a>
             </div>
@@ -560,9 +560,9 @@ export default function LandingPage() {
         <div className="max-w-4xl mx-auto px-4">
           <Reveal>
             <div className="text-center mb-16">
-              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#50aa10" }}>Common Questions</div>
-              <h2 className="font-display font-black uppercase leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#003388" }}>
-                Everything You<span className="block" style={{ color: "#64d613" }}>Need to Know</span>
+              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#6B9A34" }}>Common Questions</div>
+              <h2 className="font-display font-black uppercase leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#000000" }}>
+                Everything You<span className="block" style={{ color: "#83B940" }}>Need to Know</span>
               </h2>
             </div>
           </Reveal>
@@ -570,12 +570,12 @@ export default function LandingPage() {
           <div className="space-y-3">
             {faqs.map((faq, index) => (
               <Reveal key={index} delay={index * 60}>
-                <div className="border-2 rounded-xl overflow-hidden transition-all" style={{ borderColor: openFaq === index ? "#64d613" : "#e2e8f0" }}>
+                <div className="border-2 rounded-xl overflow-hidden transition-all" style={{ borderColor: openFaq === index ? "#83B940" : "#e2e8f0" }}>
                   <button onClick={() => setOpenFaq(openFaq === index ? null : index)}
                     className="w-full text-left flex items-center justify-between gap-4 p-6 font-bold transition-colors"
-                    style={{ color: "#003388", backgroundColor: openFaq === index ? "#f8f9fa" : "white" }}>
+                    style={{ color: "#000000", backgroundColor: openFaq === index ? "#f8f9fa" : "white" }}>
                     <span className="text-base leading-snug">{faq.q}</span>
-                    <svg className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${openFaq === index ? "rotate-180" : ""}`} style={{ color: "#64d613" }} fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                    <svg className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${openFaq === index ? "rotate-180" : ""}`} style={{ color: "#83B940" }} fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                     </svg>
                   </button>
@@ -591,10 +591,10 @@ export default function LandingPage() {
 
           <Reveal delay={400}>
             <div className="flex flex-col items-center gap-3 mt-14">
-              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#64d613", color: "#003388" }}>
+              <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Still Have Questions? Ask Us
               </a>
-              <a href={PHONE_HREF} className="border-2 rounded-xl px-8 py-3 font-bold text-base transition-all" style={{ borderColor: "#003388", color: "#003388" }}>
+              <a href={PHONE_HREF} className="border-2 rounded-xl px-8 py-3 font-bold text-base transition-all" style={{ borderColor: "#000000", color: "#000000" }}>
                 Or call us: {PHONE}
               </a>
             </div>
@@ -603,16 +603,16 @@ export default function LandingPage() {
       </section>
 
       {/* FINAL CTA / CONTACT */}
-      <section id="contact" className="py-24 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #003388 0%, #001f55 100%)" }}>
+      <section id="contact" className="py-24 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #000000 0%, #001f55 100%)" }}>
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: "rgba(100,214,19,0.1)" }} />
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full blur-3xl" style={{ backgroundColor: "rgba(255,255,255,0.05)" }} />
 
         <div className="max-w-5xl mx-auto px-4 relative z-10">
           <Reveal>
             <div className="text-center mb-12">
-              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#64d613" }}>Ready to Get Started?</div>
+              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#83B940" }}>Ready to Get Started?</div>
               <h2 className="font-display font-black text-white uppercase leading-tight mb-6" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
-                Join the Go Green<span className="block" style={{ color: "#64d613" }}>Family Today</span>
+                Join the Go Green<span className="block" style={{ color: "#83B940" }}>Family Today</span>
               </h2>
               <p className="text-xl max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.7)" }}>
                 Whether you&apos;re a homeowner, contractor, or dealer — we have the right turf solution for you. Get your free quote now.
@@ -624,9 +624,9 @@ export default function LandingPage() {
             <div className="max-w-2xl mx-auto">
               <div id="contact-form" className="bg-white rounded-2xl shadow-2xl p-8 md:p-10">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-1 h-10 rounded-full" style={{ backgroundColor: "#64d613" }} />
+                  <div className="w-1 h-10 rounded-full" style={{ backgroundColor: "#83B940" }} />
                   <div>
-                    <h3 className="text-xl font-black uppercase" style={{ color: "#003388" }}>Get Your Free Quote</h3>
+                    <h3 className="text-xl font-black uppercase" style={{ color: "#000000" }}>Get Your Free Quote</h3>
                     <p className="text-sm" style={{ color: "#64748b" }}>We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
@@ -649,15 +649,15 @@ export default function LandingPage() {
 
       {/* FLOATING STICKY CTA */}
       <div className={`fixed z-40 transition-all duration-500 bottom-0 left-0 right-0 sm:bottom-6 sm:right-6 sm:left-auto sm:w-auto ${showFloating ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 pointer-events-none"}`}>
-        <div className="flex items-stretch sm:items-center sm:rounded-full shadow-2xl" style={{ backgroundColor: "#64d613", boxShadow: "0 8px 32px rgba(100,214,19,0.4)" }}>
-          <a href="#contact" className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-5 py-4 font-black uppercase tracking-wide text-sm sm:pl-6 sm:rounded-l-full" style={{ color: "#003388" }}>
+        <div className="flex items-stretch sm:items-center sm:rounded-full shadow-2xl" style={{ backgroundColor: "#83B940", boxShadow: "0 8px 32px rgba(100,214,19,0.4)" }}>
+          <a href="#contact" className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-5 py-4 font-black uppercase tracking-wide text-sm sm:pl-6 sm:rounded-l-full" style={{ color: "#000000" }}>
             <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
             </svg>
             Get Free Quote
           </a>
           <div className="w-px self-stretch" style={{ backgroundColor: "rgba(0,51,136,0.2)" }} />
-          <a href={PHONE_HREF} className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-5 py-4 font-black uppercase tracking-wide text-sm sm:pr-6 sm:rounded-r-full" style={{ color: "#003388" }}>
+          <a href={PHONE_HREF} className="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-5 py-4 font-black uppercase tracking-wide text-sm sm:pr-6 sm:rounded-r-full" style={{ color: "#000000" }}>
             <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z" />
             </svg>
