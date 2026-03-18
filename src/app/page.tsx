@@ -204,7 +204,7 @@ export default function LandingPage() {
       <header className="fixed top-0 w-full z-50 shadow-sm" style={{ backgroundColor: "rgba(255,255,255,0.97)", borderBottom: "1px solid #e2e8f0", backdropFilter: "blur(12px)" }}>
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="https://www.gogreensynturf.com/wp-content/uploads/2025/03/GGLogoDarkSticky-NEW.png" alt="Go Green Synthetic Turf" className="h-14 w-auto" />
+          <img src="https://www.gogreensynturf.com/wp-content/uploads/2022/09/GGLogoDark.png" alt="Go Green Synthetic Turf" className="h-14 w-auto" />
           <div className="flex items-center gap-3">
             <a href={PHONE_HREF} className="hidden sm:flex items-center gap-2 border-2 rounded-lg px-4 py-2 font-bold text-sm transition-all" style={{ borderColor: "#000000", color: "#000000" }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = "#000000"; (e.currentTarget as HTMLElement).style.color = "white"; }}
