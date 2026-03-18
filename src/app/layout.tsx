@@ -40,7 +40,7 @@ export default function RootLayout({
         {/* MegaTag config — must be set BEFORE optimizer loads */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.MEGA_TAG_CONFIG={siteKey:"sk_mmv0e66a_pp52arhoujl",pixelId:"984548607190857"};`,
+            __html: `window.MEGA_TAG_CONFIG={siteKey:"sk_mmv0e66a_pp52arhoujl",gtmId:"GTM-NFFTZ9VW",pixelId:"984548607190857"};window.API_ENDPOINT="https://optimizer.gomega.ai";window.TRACKING_API_ENDPOINT="https://events-api.gomega.ai";`,
           }}
         />
         <script id="optimizer-script" src="https://cdn.gomega.ai/scripts/optimizer.min.js" data-site-id="5ef1ab2b-a778-4858-bb3d-d1cd9b311360" async />
