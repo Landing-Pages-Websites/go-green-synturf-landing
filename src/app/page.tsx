@@ -7,9 +7,8 @@ import { useMegaLeadForm } from "@/hooks/useMegaLeadForm";
 import { QueryParamPersistence } from "@/components/QueryParamPersistence";
 import { Reveal } from "@/components/Reveal";
 
-// CTM phone placeholder — replace with actual CTM number when confirmed
-const PHONE = "(XXX) XXX-XXXX"; // TODO: Replace with CTM tracking number
-const PHONE_HREF = "tel:+10000000000"; // TODO: Replace with CTM tracking number
+const PHONE = "(844) 368-4765";
+const PHONE_HREF = "tel:8443684765";
 
 function formatPhone(value: string): string {
   const digits = value.replace(/\D/g, "").slice(0, 10);
