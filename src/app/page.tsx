@@ -7,8 +7,8 @@ import { useMegaLeadForm } from "@/hooks/useMegaLeadForm";
 import { QueryParamPersistence } from "@/components/QueryParamPersistence";
 import { Reveal } from "@/components/Reveal";
 
-const PHONE = "(844) 368-4765";
-const PHONE_HREF = "tel:8443684765";
+const PHONE = "(844) 875-5999";
+const PHONE_HREF = "tel:8448755999";
 
 function formatPhone(value: string): string {
   const digits = value.replace(/\D/g, "").slice(0, 10);
