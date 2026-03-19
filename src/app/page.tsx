@@ -294,7 +294,7 @@ export default function LandingPage() {
             </div>
           </Reveal>
           <Reveal delay={300}>
-            <div className="flex flex-col items-center gap-3 mt-10">
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-10">
               <a href="#contact" className="rounded-xl px-8 py-3 font-black uppercase tracking-wide transition-all" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Get a Free Quote
               </a>
@@ -324,7 +324,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {products.map((product, index) => (
               <Reveal key={product.name} delay={index * 80}>
-                <div className="rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-xl hover:-translate-y-1" style={{ backgroundColor: product.bg, borderColor: "#e2e8f0" }}>
+                <div className="rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full flex flex-col" style={{ backgroundColor: product.bg, borderColor: "#e2e8f0" }}>
                   <div className="relative h-48 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={product.img} alt={product.name} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
@@ -333,9 +333,9 @@ export default function LandingPage() {
                       <span className="px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider" style={{ backgroundColor: product.badge }}>{product.name}</span>
                     </div>
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex-1 flex flex-col">
                     <h3 className="font-display font-black uppercase mb-1 text-xl" style={{ color: "#000000" }}>{product.tagline}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "#64748b" }}>{product.desc}</p>
+                    <p className="text-sm leading-relaxed flex-1" style={{ color: "#64748b" }}>{product.desc}</p>
                     <a href="#contact" className="inline-flex items-center gap-1 font-bold text-sm mt-4 transition-all" style={{ color: "#6B9A34" }}>
                       Get a Sample
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -349,7 +349,7 @@ export default function LandingPage() {
           </div>
 
           <Reveal delay={500}>
-            <div className="flex flex-col items-center gap-3 mt-14">
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-14">
               <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Request Free Product Samples
               </a>
@@ -405,7 +405,7 @@ export default function LandingPage() {
           </div>
 
           <Reveal delay={300}>
-            <div className="flex flex-col items-center gap-3 mt-16">
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-16">
               <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Learn More — Get a Free Quote
               </a>
@@ -451,7 +451,7 @@ export default function LandingPage() {
           </div>
 
           <Reveal delay={400}>
-            <div className="flex flex-col items-center gap-3 mt-14">
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-14">
               <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Start Your Partnership
               </a>
@@ -495,7 +495,7 @@ export default function LandingPage() {
           </div>
 
           <Reveal delay={550}>
-            <div className="flex flex-col items-center gap-3 mt-14">
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-14">
               <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Get Started Today
               </a>
@@ -541,7 +541,7 @@ export default function LandingPage() {
           </div>
 
           <Reveal delay={500}>
-            <div className="flex flex-col items-center gap-3 mt-14">
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-14">
               <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Join Our Growing Network
               </a>
@@ -588,7 +588,7 @@ export default function LandingPage() {
           </div>
 
           <Reveal delay={400}>
-            <div className="flex flex-col items-center gap-3 mt-14">
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-14">
               <a href="#contact" className="rounded-xl px-10 py-4 font-black text-lg uppercase tracking-wide transition-all shadow-lg" style={{ backgroundColor: "#83B940", color: "#000000" }}>
                 Still Have Questions? Ask Us
               </a>
