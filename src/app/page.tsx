@@ -167,12 +167,10 @@ export default function LandingPage() {
   }, [submitLead, setIsSubmitting]);
 
   const products = [
-    { name: "HEATMAXX", tagline: "Stay Cool Under Pressure", desc: "Patented heat-reduction technology keeps surface temperatures significantly cooler — ideal for Sunbelt climates and high-sun environments.", img: "https://www.gogreensynturf.com/wp-content/uploads/2022/09/Heatmaxx-47-CSmall.jpg", bg: "#FFF3E0", badge: "#FF6900" },
-    { name: "AQUAMAXX", tagline: "Built for Superior Drainage", desc: "High-flow drainage engineering handles heavy rainfall instantly. Perfect for pool surrounds, flood-prone areas, and rapid water management applications.", img: "https://www.gogreensynturf.com/wp-content/uploads/2022/09/Royal-69-CSmall.jpg", bg: "#E3F2FD", badge: "#0693e3" },
-    { name: "LAWNMAXX", tagline: "Realistic Residential Grass", desc: "Ultra-realistic residential turf with natural color variation and luxuriously soft blades. Year-round green without maintenance or water bills.", img: "https://www.gogreensynturf.com/wp-content/uploads/2022/09/Florida-Blend-CSmall.jpg", bg: "#F1F8E9", badge: "#83b940" },
-    { name: "PETMAXX", tagline: "Engineered for Pets", desc: "Antimicrobial-treated turf with odor control technology and easy-clean drainage. Let your pets run freely on a surface built for them.", img: "https://www.gogreensynturf.com/wp-content/uploads/2022/09/Petmaxx-CSmall.jpg", bg: "#FFF8E1", badge: "#fcb900" },
-    { name: "SPORTMAXX", tagline: "Professional-Grade Athletics", desc: "Consistent ball roll, shock absorption, and certified safety ratings. Trusted by athletic facilities and recreational parks nationwide.", img: "https://www.gogreensynturf.com/wp-content/uploads/2022/09/Emerald-Tee-CSmall.jpg", bg: "#EDE7F6", badge: "#7c3aed" },
-    { name: "PLAYMAXX", tagline: "Safe Surfaces for Kids", desc: "IPEMA-certified playground surfaces with validated fall-height ratings. Maximum child safety with antimicrobial protection and cushioned landing.", img: "https://www.gogreensynturf.com/wp-content/uploads/2022/09/Emerald-Putt-CSmall.jpg", bg: "#FCE4EC", badge: "#cf2e2e" },
+    { name: "HEATMAXX® SOFT", tagline: "Stay Cool Under Pressure", desc: "Patented heat-reduction technology keeps surface temperatures significantly cooler — ideal for Sunbelt climates and high-sun environments.", img: "https://www.gogreensynturf.com/wp-content/uploads/2024/10/HEATMAXX-47S-7-web.jpg", bg: "#FFF3E0", badge: "#FF6900" },
+    { name: "AQUAMAXX®", tagline: "Built for Superior Drainage", desc: "Our quickest draining product with outstanding durability and appearance. Perfect for pool surrounds, backyards, and areas with heavy rainfall — keeping your space both pet and family friendly.", img: "https://www.gogreensynturf.com/wp-content/uploads/2025/03/Aquamaxx-75-rolled.png", bg: "#E3F2FD", badge: "#0693e3" },
+    { name: "PETMAXX®", tagline: "Engineered for Pets", desc: "Premium tuft bind holds up to rough pet play. Superior drainage eliminates odor from pet waste while keeping your backyard both pet and family friendly.", img: "https://www.gogreensynturf.com/wp-content/uploads/2022/09/Petmaxx-CSmall.jpg", bg: "#FFF8E1", badge: "#fcb900" },
+    { name: "SPORTMAXX®", tagline: "Professional-Grade Athletics", desc: "All nylon yarns with intricate tuft patterns for unmatched performance and color consistency. Built for golf, sport practice fields, gyms, and high-traffic applications.", img: "https://www.gogreensynturf.com/wp-content/uploads/2025/03/Sportmaxx-100.png", bg: "#EDE7F6", badge: "#7c3aed" },
   ];
 
   const testimonials = [
@@ -185,10 +183,10 @@ export default function LandingPage() {
   ];
 
   const faqs = [
-    { q: "What makes Go Green different from competitors?", a: "Our six purpose-built product lines are each engineered for specific use cases — pets, sports, heat, drainage, residential, and play. We don't sell one turf for everything. We match the right product to your exact environment, climate, and application." },
+    { q: "What makes Go Green different from competitors?", a: "Our four purpose-built product lines are each engineered for specific use cases — heat reduction, drainage, pets, and sports. We don't sell one turf for everything. We match the right product to your exact environment, climate, and application." },
     { q: "Do you offer dealer and installer programs?", a: "Yes. We offer competitive wholesale pricing, exclusive territory opportunities, technical training, co-branded marketing materials, and dedicated account management for qualified dealers and certified installers." },
     { q: "How long does Go Green Synthetic Turf last?", a: "Our products are engineered for 15–20+ years of performance with proper installation and routine maintenance. All product lines include comprehensive manufacturer warranties." },
-    { q: "Can I request samples before ordering?", a: "Absolutely. Free samples are available for all six product lines. Fill out the form on this page, specify which products you'd like to evaluate, and we'll send them promptly." },
+    { q: "Can I request samples before ordering?", a: "Absolutely. Free samples are available for all four product lines. Fill out the form on this page, specify which products you'd like to evaluate, and we'll send them promptly." },
     { q: "Do you ship nationwide?", a: "Yes. We ship to all 50 states with competitive freight rates. Most orders ship within 5–7 business days from our manufacturing facility." },
     { q: "What maintenance does synthetic turf require?", a: "Very little. Occasional brushing to keep fibers upright, periodic rinsing for debris removal, and light infill top-ups as needed. No mowing, no watering, no fertilizing — ever." },
   ];
@@ -243,7 +241,7 @@ export default function LandingPage() {
             </Reveal>
             <Reveal delay={160}>
               <p className="text-lg mb-8 leading-relaxed max-w-lg" style={{ color: "#64748b" }}>
-                Go Green Synthetic Turf engineers premium artificial turf systems built for real performance. Six purpose-built product lines for pets, sports, pools, residential lawns, and commercial spaces. Dealer pricing available.
+                Go Green Synthetic Turf engineers premium artificial turf systems built for real performance. Four purpose-built product lines for heat reduction, drainage, pets, and sports. Dealer pricing available.
               </p>
             </Reveal>
             <Reveal delay={240}>
@@ -283,7 +281,7 @@ export default function LandingPage() {
               {[
                 { target: 15, suffix: "+", label: "Years in Business" },
                 { target: 500, suffix: "+", label: "Projects Completed" },
-                { target: 6, suffix: "", label: "Product Lines" },
+                { target: 4, suffix: "", label: "Product Lines" },
                 { target: 50, suffix: "+", label: "States Served" },
               ].map((stat) => (
                 <div key={stat.label}>
@@ -313,7 +311,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
             <div className="text-center mb-16">
-              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#6B9A34" }}>Six Engineered Product Lines</div>
+              <div className="text-sm font-bold uppercase tracking-[0.2em] mb-3" style={{ color: "#6B9A34" }}>Four Engineered Product Lines</div>
               <h2 className="font-display font-black uppercase leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#000000" }}>
                 Purpose-Built for<span className="block" style={{ color: "#83B940" }}>Every Application</span>
               </h2>
@@ -323,7 +321,7 @@ export default function LandingPage() {
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {products.map((product, index) => (
               <Reveal key={product.name} delay={index * 80}>
                 <div className="rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-xl hover:-translate-y-1" style={{ backgroundColor: product.bg, borderColor: "#e2e8f0" }}>
@@ -480,7 +478,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { step: "01", title: "Consultation", desc: "Tell us about your project. We recommend the right product line and provide expert technical guidance." },
-              { step: "02", title: "Product Selection", desc: "Choose from six engineered turf lines. Request free samples to see and feel the quality before committing." },
+              { step: "02", title: "Product Selection", desc: "Choose from four engineered turf lines. Request free samples to see and feel the quality before committing." },
               { step: "03", title: "Customization", desc: "We tailor specifications to your exact requirements — size, drainage, usage type, climate, and more." },
               { step: "04", title: "Delivery & Support", desc: "Fast nationwide shipping with full installation guides, technical support, and warranty coverage." },
             ].map((item, index) => (
