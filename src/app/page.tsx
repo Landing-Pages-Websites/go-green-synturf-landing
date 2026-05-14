@@ -122,7 +122,7 @@ function LeadFormContent({ onSubmit, isSubmitting, submitted }: {
       <button type="submit" disabled={isSubmitting}
         className="w-full font-black py-4 rounded-lg text-base uppercase tracking-wide transition-all disabled:opacity-50 shadow-lg"
         style={{ backgroundColor: "#83B940", color: "#000000" }}>
-        {isSubmitting ? "Submitting..." : "Request Pricing & Info"}
+        {isSubmitting ? "Submitting..." : "Apply for Dealer Pricing"}
       </button>
     </form>
   );
@@ -213,7 +213,7 @@ export default function LandingPage() {
               {PHONE}
             </a>
             <a href="#contact" className="rounded-lg px-5 py-2.5 font-black text-sm uppercase tracking-wide transition-all shadow-md" style={{ backgroundColor: "#83B940", color: "#000000" }}>
-              Get Wholesale Quote
+              Apply for Dealer Pricing
             </a>
           </div>
         </div>
@@ -234,10 +234,20 @@ export default function LandingPage() {
             </Reveal>
             <Reveal delay={80}>
               <h1 className="font-display font-black mb-6 uppercase leading-tight" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", color: "#000000", lineHeight: "1.0" }}>
-                THE GRASS IS
-                <span className="block" style={{ color: "#83B940" }}>ALWAYS GREENER</span>
-                <span className="block" style={{ color: "#4d4d4d", fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}>ON OUR SIDE.</span>
+                WHOLESALE SYNTHETIC TURF
+                <span className="block" style={{ color: "#83B940" }}>FOR DEALERS</span>
+                <span className="block" style={{ color: "#4d4d4d", fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}>&amp; INSTALLERS</span>
               </h1>
+            </Reveal>
+            <Reveal delay={120}>
+              <ul id="hero-bullets" className="flex flex-wrap gap-x-5 gap-y-2 mb-6" aria-label="Dealer program highlights">
+                {["Wholesale pricing", "Bulk rolls available", "32+ product SKUs", "Nationwide shipping", "Manufacturer-direct"].map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-sm md:text-base font-semibold" style={{ color: "#000000" }}>
+                    <span aria-hidden="true" className="inline-flex items-center justify-center w-5 h-5 rounded-full text-xs font-black" style={{ backgroundColor: "#83B940", color: "#000000" }}>✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </Reveal>
             <Reveal delay={160}>
               <p className="text-lg mb-8 leading-relaxed max-w-lg" style={{ color: "#64748b" }}>
@@ -296,7 +306,7 @@ export default function LandingPage() {
           <Reveal delay={300}>
             <div className="flex flex-wrap items-center justify-center gap-3 mt-10">
               <a href="#contact" className="rounded-xl px-8 py-3 font-black uppercase tracking-wide transition-all" style={{ backgroundColor: "#83B940", color: "#000000" }}>
-                Request Dealer Pricing
+                Apply for Dealer Pricing
               </a>
               <a href={PHONE_HREF} className="border-2 border-white text-white rounded-xl px-6 py-2.5 font-bold text-sm transition-all">
                 Or call us: {PHONE}
@@ -919,7 +929,7 @@ export default function LandingPage() {
           <svg className="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
           </svg>
-          Get Wholesale Quote
+          Apply for Dealer Pricing
         </a>
       </div>
     </>
